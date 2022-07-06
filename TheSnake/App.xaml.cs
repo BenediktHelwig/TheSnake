@@ -28,6 +28,7 @@ namespace TheSnake
         {
             services.AddSingleton<MainWindow>();
             services.AddTransient<Snake>();
+            services.AddSingleton<SnakeControl>();
             services.AddTransient<Food>();
         }
 
