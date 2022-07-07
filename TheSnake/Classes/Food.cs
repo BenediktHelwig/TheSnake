@@ -1,14 +1,25 @@
 ﻿using System;
+using System.Windows;
+using System.Windows.Media;
 
 namespace TheSnake.Classes
 {
     public class Food
     {
-        const int FoodSquareSize = 20;
+        private UIElement _snakeFood;
 
-        public void DrawFood()
+        public UIElement SnakeFood
         {
-
+            get { return _snakeFood; }
+            set { _snakeFood = value; }
         }
+
+        private SolidColorBrush _foodBrush;
+
+        public SolidColorBrush FoodBrush
+        {
+            get { return _foodBrush = Brushes.Red; }
+        }
+
     }
 }

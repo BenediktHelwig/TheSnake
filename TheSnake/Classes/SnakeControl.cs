@@ -10,6 +10,21 @@ namespace TheSnake.Classes
     {
         public enum SnakeDirection { Left, Up, Right, Down};
 
-        public SnakeDirection snakeDirection = SnakeDirection.Right;
+        private SnakeDirection _originalSnakeDirection;
+
+        public SnakeDirection OriginalSnakeDirection
+        { 
+            get { return _originalSnakeDirection; }
+            set { _originalSnakeDirection = value; }
+        }
+
+        private SnakeDirection _snakeDirec;
+
+        public SnakeDirection SnakeDirec
+        {
+            get { return _snakeDirec; }
+            set { _snakeDirec = value; }
+        }
+
     }
 }
