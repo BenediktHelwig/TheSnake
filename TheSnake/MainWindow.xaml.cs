@@ -182,9 +182,13 @@ namespace TheSnake
         private void DoCollisionCheck()
         {
             SnakePart snakeHead = _snake.snakeParts[_snake.snakeParts.Count - 1];
+            //var x = snakeHead.Position.X;
+            //var y = snakeHead.Position.Y;
+            //var left = Canvas.GetLeft(_food.SnakeFood);
+            //var top = Canvas.GetLeft(_food.SnakeFood);
             if ((snakeHead.Position.X == Canvas.GetLeft(_food.SnakeFood)) 
                 && 
-                (snakeHead.Position.Y == Canvas.GetLeft(_food.SnakeFood)))
+                (snakeHead.Position.Y == Canvas.GetTop(_food.SnakeFood)))
             {
                 EatFood();
                 return;
