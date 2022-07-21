@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using TheSnake.Classes;
+using TheSnake.Interfaces;
 
 namespace TheSnake
 {
@@ -27,10 +28,10 @@ namespace TheSnake
         public static void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            services.AddTransient<Snake>();
+            services.AddTransient<ISnake, Snake>();
+            services.AddTransient<IFood, Food>();
             services.AddSingleton<SnakePart>();
             services.AddSingleton<SnakeControl>();
-            services.AddTransient<Food>();
         }
 
         private void OnStartup(object sender, StartupEventArgs e)

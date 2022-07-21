@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheSnake.Interfaces;
 
 namespace TheSnake.Classes
 {
     public class SnakeControl
     {
-        public enum SnakeDirection { Left, Up, Right, Down};
+        public enum SnakeDirection { Left, Up, Right, Down };
 
         private SnakeDirection _originalSnakeDirection;
 
         public SnakeDirection OriginalSnakeDirection
-        { 
+        {
             get { return _originalSnakeDirection; }
             set { _originalSnakeDirection = value; }
         }
@@ -25,6 +26,5 @@ namespace TheSnake.Classes
             get { return _snakeDirec; }
             set { _snakeDirec = value; }
         }
-
     }
 }

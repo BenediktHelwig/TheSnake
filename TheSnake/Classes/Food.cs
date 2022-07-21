@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Media;
+using TheSnake.Interfaces;
 
 namespace TheSnake.Classes
 {
-    public class Food
+    public class Food : IFood
     {
         private UIElement _snakeFood;
 
@@ -18,8 +19,8 @@ namespace TheSnake.Classes
 
         public SolidColorBrush FoodBrush
         {
-            get { return _foodBrush = Brushes.Red; }
+            get { return _foodBrush; }
+            set { _foodBrush = value; }
         }
-
     }
 }
